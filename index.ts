@@ -39,7 +39,7 @@ function sleep(seconds: number) {
 }
 
 async function createCertificatePfx() {
-    const base64Certificate = core.getInput('certificate').replace(/(-*)(BEGIN|END)( CERTIFICATE)(-*)/g, '');
+    const base64Certificate = core.getInput('certificate').replace(/(-+)(BEGIN|END)( CERTIFICATE)(-+)/g, '');
     const certificate = Buffer.from(base64Certificate, 'base64');
     if (certificate.length == 0) {
         console.log('The value for "certificate" is not set.');
