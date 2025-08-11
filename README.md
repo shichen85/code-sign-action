@@ -44,7 +44,7 @@ You may find the secrets page by navigating to `Settings > Secrets > Actions` on
 
 ### `files`
 
-**Optional** The paths to the files to sign.
+**Optional** The paths to the files to sign. Cannot be used if `folder` is already defined.
 
 ### `description`
 
